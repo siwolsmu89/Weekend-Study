@@ -36,12 +36,29 @@ public class control_2 {
 		
 		// 입력받은 첫 번째 숫자가 두 번째 숫자보다 크다면 두 수의 합을 구하는 제어문을 작성하시오.
 		// (구한 값은 println으로 출력)
+		if (firstNumber > secondNumber) {
+			int sum = firstNumber+secondNumber;
+			System.out.println(sum);
+		}
 		
 		// 입력받은 두 숫자의 크기 차이를 구하고, 결과가 항상 0 이상의 정수로 표현되도록 제어문을 작성하시오.
 		// (구한 값은 println으로 출력)
+		if (firstNumber>secondNumber) {
+			int result = firstNumber - secondNumber;
+			System.out.println(result);
+		} else {
+			int result = secondNumber - firstNumber;
+			System.out.println(result);
+		}
 		
 		// 두 숫자의 합이 홀수이면 두 숫자의 합을 구하고, 두 숫자의 합이 짝수이면 결과가 홀수가 될 때까지 2로 나눈 수를 구하시오.
 		// (구한 값은 println으로 출력)
-			
+		int result = firstNumber+secondNumber;
+		if (result%2==0) {
+			while(result%2==0) {
+				result = result/2;
+			}
+		} 
+		System.out.println(result);
 	}
 }

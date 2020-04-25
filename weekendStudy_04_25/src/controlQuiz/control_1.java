@@ -34,10 +34,32 @@ public class control_1 {
 		int secondNumber = getNumber();
 		
 		// 1. for문을 사용하여 두 수의 합을 구하시오. (구한 값은 println으로 출력)
+		int sum = 0;
+		for (int i = firstNumber; i<=secondNumber; i++) {
+			sum += i;
+		}
+		System.out.println(sum);
 		
 		// 2. while문을 사용하여 두 수의 합을 구하시오. (구한 값은 println으로 출력)
+		int n = firstNumber;
+		sum = 0;
+		while (n <= secondNumber) {
+			sum += n;
+			n++;
+		}
+		System.out.println(sum);
 		
 		// 3. (선택) 	그 밖에 생각해 본 다른 방법이 있다면 적어 보시오.
+		if (firstNumber > secondNumber) {
+			int tmp = firstNumber;
+			firstNumber = secondNumber;
+			secondNumber = tmp;
+		}
+		sum = 0;
+		for (int i = firstNumber; i<=secondNumber; i++) {
+			sum += i;
+		}
+		System.out.println(sum);
 		
 	}
 	
