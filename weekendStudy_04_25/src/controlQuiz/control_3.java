@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * 숫자를 입력받아 해당 숫자에 대한 구구단을 출력하기 예) 2 입력 시, 2*1부터 2*9까지 (구구단 2단)을 출력
+ * 
  * @author siwol_smu
  *
  */
@@ -13,6 +14,7 @@ public class control_3 {
 
 	/**
 	 * 키보드로부터 숫자를 입력받는 메소드
+	 * 
 	 * @return int형 숫자
 	 * @throws IOException
 	 * @throws NumberFormatException
@@ -47,15 +49,15 @@ public class control_3 {
 			}
 			System.out.println();
 		}
-		
+
 		// 두 숫자를 입력받아 firstNumber단부터 secondNumber단까지 구구단을 출력하기
 		// 이번에는 사용자가 2와 4를 입력했다면
-		// 2*1=2   3*1=3    4*1=4
-		// 2*2=4   3*2=6    4*2=8
+		// 2*1=2 3*1=3 4*1=4
+		// 2*2=4 3*2=6 4*2=8
 		// 이런 식으로 *2부터 *9까지 출력되도록 하기
-		for (int i = 1; i<=9; i++) {
+		for (int i = 1; i <= 9; i++) {
 			for (int j = firstNumber; j <= secondNumber; j++) {
-				System.out.print(j+" * " + i + " = " + j*i + "\t\t");
+				System.out.print(j + " * " + i + " = " + j * i + "\t\t");
 			}
 			System.out.println();
 		}
