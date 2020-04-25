@@ -33,8 +33,6 @@ public class control_1 {
 		System.out.print("두 번째 숫자를 입력하세요: ");
 		int secondNumber = getNumber();
 		
-		int sum = 0;
-		
 		// 1. for문을 사용하여 두 수의 합을 구하시오.
 		
 		// 2. while문을 사용하여 두 수의 합을 구하시오.
