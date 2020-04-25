@@ -32,6 +32,17 @@ public class control_3 {
 		int dan = getNumber();
 		
 		// 해당 숫자에 대한 구구단 출력하기
+		for (int i=1; i<=9; i++) {
+			System.out.println(dan + " * " + i + " = " + dan * i);
+		}
+		
+		// 두 숫자를 입력받아 firstNumber 단부터 secondNumber 단까지의 구구단을 출력하기
+		System.out.print("숫자를 입력하세요: ");
+		int firstNumber = getNumber();
+		System.out.print("숫자를 입력하세요: ");
+		int secondNumber = getNumber();
+		
+		
 	}
 	
 }

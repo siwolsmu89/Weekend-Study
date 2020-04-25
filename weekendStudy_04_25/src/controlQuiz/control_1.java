@@ -59,7 +59,7 @@ public class control_1 {
 		for (int i = firstNumber; i<=secondNumber; i++) {
 			sum += i;
 		}
-		System.out.println(sum);
+		System.out.println(firstNumber+ " + " + secondNumber + "=" + sum);
 		
 	}
 	
