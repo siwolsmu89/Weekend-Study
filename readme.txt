@@ -1,3 +1,4 @@
-노트북 project / weekendStudy 
+WeekEnd Study with HT, MH
+every Saturday
 
-git push study master
+-- Laptop / SIWOLSMU / git remote study
