@@ -1,9 +1,11 @@
 게시판 만들기
 6/20 시작을 목표로
 
-- Java / 개인 학습
+필요한 프로그램 : Java, mariaDB, Tomcat
+에디터 : VisualStudio Code
+
+- Java
 - DB / mariaDB
 - html, css
-- jsp, tomcat(WAS)
-- javascript : 순정 (bootstrap은 자바스크립트의 api 중 하나)
-
+- jsp, Tomcat(WAS)
+- javascript : 순정

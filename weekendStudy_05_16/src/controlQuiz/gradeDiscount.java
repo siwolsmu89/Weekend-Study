@@ -1,5 +1,7 @@
 package src.controlQuiz;
 
+import java.util.Scanner;
+
 public class gradeDiscount {
 
 	public static void main(String[] args) {
@@ -16,5 +18,35 @@ public class gradeDiscount {
 		 * 		총 구매금액, 고객등급, 할인된 금액, 결제할 금액, 적립된 포인트
 		 * 이다.
 		 */
+		Scanner scanner = new Scanner(System.in);
+		
+
+		System.out.print("고객등급을 입력하세요(일반, 로얄, 플래티넘 중 하나): ");
+		String grade = scanner.next();
+		System.out.print("총 구매금액을 입력하세요: ");
+		int orderPrice = scanner.nextInt();
+
+		double pointRate = 0.03;
+		double discountRate = 0.00;
+		if (grade.equals("플래티넘")) {
+			discountRate = 0.10;
+		} else if (grade.equals("로얄")) {
+			discountRate = 0.03;
+		} else if (grade.equals("일반")) {
+			discountRate = 0.01;
+		} else {
+			discountRate = 0.00;
+		}
+		
+		int discountPrice = (int)(orderPrice * discountRate);
+		int payPrice = (orderPrice - discountPrice);
+		int depositPoint = (int)(payPrice * pointRate);
+		
+		System.out.println("총 구매금액: " + orderPrice);
+		System.out.println("고객등급: " + grade);
+		System.out.println("할인된 금액: " + discountPrice);
+		System.out.println("결제할 금액: " + payPrice);
+		System.out.println("적립된 포인트: " + depositPoint);
+		
 	}
 }
