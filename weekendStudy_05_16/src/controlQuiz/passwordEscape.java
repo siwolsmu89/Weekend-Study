@@ -20,27 +20,21 @@ public class passwordEscape {
 		Scanner scanner = new Scanner(System.in);
 		
 		inputCount=0;
-		numMax=100; numMin=1; 
-		
-		System.out.print("1~100 범위의 숫자를 하나 입력해주세요: ");
-		inputNumber = scanner.nextInt();
 
 		while (true) {
+			System.out.print("1~100 범위의 숫자를 하나 입력해주세요: ");
+			inputNumber = scanner.nextInt();
 			inputCount++;
+			
 			if (inputNumber==secretNumber) {
 				System.out.print("found! ");
 				System.out.println("정답: "+secretNumber+" 시도한 횟수: "+inputCount);
 				break;
 			} else if (inputNumber<secretNumber) {
-				System.out.print("up! 입력한 값: "+inputNumber);
-				numMin = inputNumber;
-				System.out.println(" 예상범위: "+numMin+"부터 "+numMax+"사이");
+				System.out.println("up! 입력한 값: "+inputNumber);
 			} else {
-				System.out.print("down! 입력한 값: "+inputNumber);
-				numMax = inputNumber;
-				System.out.println(" 예상범위: "+numMin+"부터 "+numMax+"사이");
+				System.out.println("down! 입력한 값: "+inputNumber);
 			}
-			inputNumber=(int)(Math.random()*(numMax-numMin)+numMin);
 		}
 		
 	}
