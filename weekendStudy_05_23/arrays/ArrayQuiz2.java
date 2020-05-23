@@ -13,7 +13,19 @@ public class ArrayQuiz2 {
 		// 5번 반복해서 숫자를 입력받고 배열에 담기
 		Scanner scanner = new Scanner(System.in);
 		
-		// 최대값 구하기
+		for (int i=0; i<5; i++) {
+			inputNums[i] = scanner.nextInt();
+		}
 		
+		// 최대값 구하기
+		int max = 0;
+		for (int number : inputNums) {
+			if (number >= max) {
+				max = number;
+			}
+		}
+		
+		System.out.println(max);
+		scanner.close();
 	}
 }
