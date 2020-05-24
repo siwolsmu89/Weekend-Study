@@ -16,45 +16,6 @@ public class BaseBallGame {
 		 * 		최대 10회까지 시도할 수 있다.
 		 * 		출력값이 "3S0B"인 경우 사용자가 숫자를 모두 맞힌 경우다.
 		 */
-		int[] randomNumbers = {1,3,4};
-		for (int i=0; i<3; i++) {
-			int random = (int)(Math.random()*9)+1;
-			randomNumbers[i] = random;
-		}
 		
-		System.out.println("야구게임 시작");
-		int[] inputNumbers = new int[3];
-		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println(Arrays.toString(randomNumbers));
-		int count=0;
-		while(count<10) {
-			for (int i=0; i<3; i++) {
-				System.out.println("숫자를 입력하세요: ");
-				inputNumbers[i] = scanner.nextInt();
-			}
-			
-			int strike = 0;
-			int ball = 0;
-			
-			for (int i=0; i<3; i++) {
-				for (int j=0; j<3; j++) {
-					}
-				}
-			}
-			
-			if(strike==3) {
-				System.out.println("정답입니다!");
-				break;
-			} else {
-				System.out.println(strike + "S" + ball + "B");
-			}
-			
-			count++;
-		}
-		
-		
-		
-		scanner.close();
 	}
 }
