@@ -4,6 +4,56 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class BaseBallGame {
+	
+	public static int checkStrikeCount(int[] random, int[] input) {
+		int strike = 0;
+		
+		for (int i=0; i<3; i++) {
+			if (input[i]==random[i]) {
+				strike++;
+			} 
+		}
+		return strike;
+	}
+
+	public static int checkBallCount(int[] random, int[] input) {
+		int ball = 0;
+		
+		int[] distinct = new int[3];
+		
+		for (int i=0; i<3; i++) {
+			distinct[i] = random[i];
+		}
+		
+		for (int i=0; i<3; i++) {
+			for (int j=0; j<i; j++) {
+				if (distinct[i]==distinct[j]) {
+					distinct[j]= -1;
+				}
+			}
+		}
+		
+		System.out.println(distinct[0] + " " + distinct[1] + " " + distinct[2]);
+		
+		for (int i=0; i<3; i++) {
+			for (int j=0; j<3; j++) {
+				if (i==j) {
+					continue;
+				}
+
+				if (distinct[i] == -1) {
+					continue;
+				}
+				
+				if (distinct[i]==input[j]) {
+					ball++;
+				}
+			}
+		}
+		
+		return ball;
+	}
+	
 	public static void main(String[] args) {
 
 		/*
@@ -16,11 +66,12 @@ public class BaseBallGame {
 		 * 		최대 10회까지 시도할 수 있다.
 		 * 		출력값이 "3S0B"인 경우 사용자가 숫자를 모두 맞힌 경우다.
 		 */
-		int[] randomNumbers = {1,3,4};
-		for (int i=0; i<3; i++) {
-			int random = (int)(Math.random()*9)+1;
-			randomNumbers[i] = random;
-		}
+//		int[] randomNumbers = new int[3];
+//		for (int i=0; i<3; i++) {
+//			int random = (int)(Math.random()*9)+1;
+//			randomNumbers[i] = random;
+//		}
+		int[] randomNumbers = {8, 9, 8};
 		
 		System.out.println("야구게임 시작");
 		int[] inputNumbers = new int[3];
@@ -34,21 +85,8 @@ public class BaseBallGame {
 				inputNumbers[i] = scanner.nextInt();
 			}
 			
-			int strike = 0;
-			int ball = 0;
-			
-			// 이 부분에 개선이 필요한 사항이 있음
-			for (int i=0; i<3; i++) {
-				for (int j=0; j<3; j++) {
-					if (inputNumbers[j]==randomNumbers[i]) {
-						if (i==j) {
-							strike++;
-						} else {
-							ball++;
-						}
-					}
-				}
-			}
+			int strike = checkStrikeCount(randomNumbers, inputNumbers);
+			int ball = checkBallCount(randomNumbers, inputNumbers);
 			
 			if(strike==3) {
 				System.out.println("정답입니다!");
