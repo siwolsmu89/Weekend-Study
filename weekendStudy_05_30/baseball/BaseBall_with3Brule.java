@@ -64,12 +64,11 @@ public class BaseBall_with3Brule {
 		 * 		최대 10회까지 시도할 수 있다.
 		 * 		출력값이 "3S0B"인 경우 사용자가 숫자를 모두 맞힌 경우다.
 		 */
-//		int[] randomNumbers = new int[3];
-//		for (int i=0; i<3; i++) {
-//			int random = (int)(Math.random()*9)+1;
-//			randomNumbers[i] = random;
-//		}
-		int[] randomNumbers = {8, 9, 8};
+		int[] randomNumbers = new int[3];
+		for (int i=0; i<3; i++) {
+			int random = (int)(Math.random()*9)+1;
+			randomNumbers[i] = random;
+		}
 		
 		System.out.println("야구게임 시작");
 		int[] inputNumbers = new int[3];
