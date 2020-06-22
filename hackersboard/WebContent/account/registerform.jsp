@@ -27,23 +27,23 @@
 				<form id="ip-form" method="POST" action="register.jsp" >
 					<div class="form-group">
 						<label>별명</label>
-						<input type="text" name="ipname" placeholder="별명을 입력하세요." >
+						<input type="text" name="username" placeholder="별명을 입력하세요." >
 					</div>
 					<div class="form-group">
 						<label>아이디</label>
-						<input type="text" name="ipid" placeholder="아이디를 입력하세요." >
+						<input type="text" name="userid" placeholder="아이디를 입력하세요." >
 					</div>
 					<div class="form-group">
 						<label>이메일</label>
-						<input type="text" name="ipemail" placeholder="이메일 주소를 입력하세요." >
+						<input type="text" name="useremail" placeholder="이메일 주소를 입력하세요." >
 					</div>
 					<div class="form-group">
 						<label>비밀번호</label>
-						<input type="password" id="pwd1" name="ippwd" placeholder="비밀번호를 입력하세요." >
+						<input type="password" id="password-1" name="userpassword" placeholder="비밀번호를 입력하세요." >
 					</div>
 					<div class="form-group">
 						<label>비밀번호 확인</label>
-						<input type="password" id="pwd2" name="ippwd2" placeholder="비밀번호를 입력하세요." >
+						<input type="password" id="password-2" placeholder="비밀번호를 입력하세요." >
 					</div>
 					<div>
 						<button type="button" onclick="checkforms()">제출</button>
@@ -64,8 +64,8 @@
 			}
 		}
 		
-		var pwd1 = document.querySelector("#pwd1").value;
-		var pwd2 = document.querySelector("#pwd2").value;
+		var pwd1 = document.querySelector("#password-1").value;
+		var pwd2 = document.querySelector("#password-2").value;
 		
 		if (pwd1 != pwd2) {
 			alert("비밀번호가 일치하지 않습니다.");
