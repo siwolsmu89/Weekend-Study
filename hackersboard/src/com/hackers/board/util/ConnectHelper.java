@@ -11,7 +11,7 @@ public class ConnectHelper {
 	
 	static {
 		try {
-			Class.forName("oracle.jdbc.OracleDriver");
+			Class.forName("org.mariadb.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
@@ -19,7 +19,7 @@ public class ConnectHelper {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String url = "jdbc:mariadb://서버명 또는 ip:포트번호:db명";
 		String user = "hackers";
 		String password = "zxcv1234";
 		

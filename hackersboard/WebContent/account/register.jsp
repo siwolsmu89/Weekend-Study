@@ -1,3 +1,4 @@
+<%@page import="com.hackers.board.dao.UserDao"%>
 <%@page import="com.hackers.board.vo.User"%>
 <%@page import="com.hackers.board.util.StringUtil"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -16,8 +17,9 @@
 	user.setEmail(email);
 	user.setPassword(password);
 	
-	userDao.insertUser(user);
+	UserDao ud = new UserDao();
+	ud.insertUser(user);
 	
-	response.sendRedirect("loginform.jsp");
+	response.sendRedirect("complete.jsp");
 	
 %>
