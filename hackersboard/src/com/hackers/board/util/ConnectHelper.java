@@ -19,7 +19,7 @@ public class ConnectHelper {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		String url = "jdbc:mariadb://서버명 또는 ip:포트번호:db명";
+		String url = "jdbc:mariadb://localhost:3306/hackers_board";
 		String user = "hackers";
 		String password = "zxcv1234";
 		
