@@ -19,7 +19,7 @@ public class ConnectHelper {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		String url = "jdbc:mariadb://localhost:3306/hackers_board";
+		String url = "jdbc:mariadb://localhost:3306/hackers_board?useUnicode=true&characterEncoding=UTF8";
 		String user = "hackers";
 		String password = "zxcv1234";
 		

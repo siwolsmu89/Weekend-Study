@@ -22,6 +22,6 @@
 	
 	session.setAttribute("newUserName", name);
 	
-	response.sendRedirect("complete.jsp");
+	// response.sendRedirect("complete.jsp");
 	
 %>
