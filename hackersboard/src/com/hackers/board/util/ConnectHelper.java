@@ -19,14 +19,14 @@ public class ConnectHelper {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		String url = "jdbc:mariadb://localhost:3306/hackers_board?useUnicode=true&characterEncoding=UTF8";
+		String url = "jdbc:mariadb://localhost:3306/hackers_board?useUnicode=true&amp;characterEncoding=utf8";
 		String user = "hackers";
 		String password = "zxcv1234";
 		
 		return DriverManager.getConnection(url, user, password);
 	}
 	
-	public PreparedStatement prepareSelect(Connection connection, String sql, Object[] args) throws SQLException {
+	public PreparedStatement prepareQuery(Connection connection, String sql, Object[] args) throws SQLException {
 		PreparedStatement pstmt = connection.prepareStatement(sql);
 		for (int i = 0; i < args.length; i++) {
 			String className = args[i].getClass().getName();

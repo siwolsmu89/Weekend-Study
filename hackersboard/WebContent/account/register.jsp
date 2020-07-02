@@ -20,8 +20,10 @@
 	UserDao ud = new UserDao();
 	ud.insertUser(user);
 	
-	session.setAttribute("newUserName", name);
+	User newUser = ud.getUserById(id);
+	session.setAttribute("newUserId", id);
+	session.setAttribute("user", newUser);
 	
-	// response.sendRedirect("complete.jsp");
+	response.sendRedirect("complete.jsp");
 	
 %>
