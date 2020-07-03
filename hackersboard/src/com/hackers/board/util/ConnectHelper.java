@@ -3,7 +3,6 @@ package com.hackers.board.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -41,6 +40,11 @@ public class ConnectHelper {
 			if ("java.util.Date".equals(className)) {
 				Date argDate = (Date) args[i];
 				pstmt.setDate(i + 1, new java.sql.Date(argDate.getTime()));
+			}
+			
+			if("java.lang.Boolean".equals(className)) {
+				String yn = (boolean) args[i] ? "Y" : "N";
+				pstmt.setString(i + 1, yn);
 			}
 		}
 		
