@@ -18,8 +18,8 @@ public class ConnectHelper {
 	}
 	
 	public Connection getConnection() throws SQLException {
-		String url = "jdbc:mariadb://localhost:3306/we_board?useUnicode=true&amp;characterEncoding=utf8";
-		String user = "weekendstudy";
+		String url = "jdbc:mariadb://localhost:3306/hackers_board?useUnicode=true&amp;characterEncoding=utf8";
+		String user = "hackers";
 		String password = "zxcv1234";
 		
 		return DriverManager.getConnection(url, user, password);

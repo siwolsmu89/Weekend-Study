@@ -69,6 +69,22 @@ public class BoardDao {
 		return board;
 	}
 	
+	public int getBoardCount() throws SQLException {
+		int count = -1;
+		ConnectHelper ch = new ConnectHelper();
+		Connection con = ch.getConnection();
+		String sql = "SELECT COUNT(*) AS CNT FROM boards";
+		PreparedStatement pstmt = con.prepareStatement(sql);
+
+		ResultSet rs = pstmt.executeQuery();
+		if (rs.next()) {
+			count = rs.getInt("CNT");
+		}
+		
+		
+		return count;
+	}
+	
 	public Board getBoardByNo(int boardNo) throws SQLException {
 		Board board = null;
 		

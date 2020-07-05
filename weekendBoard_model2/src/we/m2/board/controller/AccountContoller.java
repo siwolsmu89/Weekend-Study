@@ -15,7 +15,7 @@ public class AccountContoller implements Controller {
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 
-		System.out.println("acc 컨트롤러 실행됨");
+		System.out.println("account 컨트롤러 실행됨");
 		
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();

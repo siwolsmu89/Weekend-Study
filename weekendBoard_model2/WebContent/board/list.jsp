@@ -87,7 +87,7 @@
 						<tr class="text-center">
 							<td><%=board.getNo() %></td>
 							<td class="text-left">
-								<a href="#" style="text-decoration: none; color: black;"><%=StringUtil.nullValueBlank(board.getTitleHeader()) %> <%=board.getTitle() %></a>
+								<a href="detail.we" style="text-decoration: none; color: black;"><%=StringUtil.nullValueBlank(board.getTitleHeader()) %> <%=board.getTitle() %></a>
 							</td>
 							<td><%=board.getUserName() %></td>
 							<td><%=board.getViewCount() %></td>
